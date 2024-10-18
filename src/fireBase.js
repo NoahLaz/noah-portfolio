@@ -6,14 +6,15 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 
-const apiKey = import.meta.VITE_FIREBASE_API_KEY;
-const authDomain = import.meta.VITE_FIREBASE_AUTH_DOMAIN;
-const projectId = import.meta.VITE_FIREBASE_PROJECTID;
-const storageBucket = import.meta.VITE_FIREBASE_STORAGE_BUCKET;
-const messagingSenderId = import.meta.VITE_FIREBASE_MESSAGING_SENDERID;
-const appId = import.meta.VITE_FIREBASE_APPID;
-const databaseURL = import.meta.VITE_FIREBASE_DATABASE_URL;
+const apiKey = import.meta.env.VITE_FIREBASE_API_KEY;
+const authDomain = import.meta.env.VITE_FIREBASE_AUTH_DOMAIN;
+const projectId = import.meta.env.VITE_FIREBASE_PROJECTID;
+const storageBucket = import.meta.env.VITE_FIREBASE_STORAGE_BUCKET;
+const messagingSenderId = import.meta.env.VITE_FIREBASE_MESSAGING_SENDERID;
+const appId = import.meta.env.VITE_FIREBASE_APPID;
+const databaseURL = import.meta.env.VITE_FIREBASE_DATABASE_URL;
 
+console.log(databaseURL);
 const firebaseConfig = {
   apiKey,
   authDomain,
