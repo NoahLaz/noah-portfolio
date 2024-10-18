@@ -34,9 +34,9 @@ const Title = styled.h5`
   font-size: 20px;
 `;
 
-const Project = ({ item }) => {
+const Project = ({ project }) => {
   const handleClick = () => {
-    window.location.href = "https://github.com/NoahLaz/";
+    window.location.href = project.repoLink;
   };
 
   return (
@@ -45,8 +45,10 @@ const Project = ({ item }) => {
         <Image src="https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></Image>
       </ImageContainer>
       <Wrapper>
-        <Title>{item.title}</Title>
-        <Text>{item.desc}</Text>
+        <Title>{project.title}</Title>
+        <Text>{project.description}</Text>
+        <Text>{project.keywords}</Text>
+
         <Button onClick={handleClick}>Read More!</Button>
       </Wrapper>
     </Container>
